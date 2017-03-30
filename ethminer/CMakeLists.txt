@@ -33,9 +33,9 @@ if (JSONRPC)
 	endif()
 endif()
 
-target_link_libraries(${EXECUTABLE} ethcore)
-target_link_libraries(${EXECUTABLE} ethash)
-target_link_libraries(${EXECUTABLE} devcore)
+target_link_libraries(${EXECUTABLE} ethcore pthread)
+target_link_libraries(${EXECUTABLE} ethash pthread)
+target_link_libraries(${EXECUTABLE} devcore pthread)
 
 if (ETHSTRATUM)
 target_link_libraries(${EXECUTABLE} ethstratum)
